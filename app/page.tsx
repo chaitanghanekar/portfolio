@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <>
     <Head>
-      <link rel="icon" href="/favicon.ico"/>
+      <link rel="icon" href="/favicon1.ico"/>
     </Head>
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
