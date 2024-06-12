@@ -11,14 +11,13 @@ import { baseUrl } from './sitemap'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Chaitan Ghanekar Portfolio',
+    default: 'Chaitan Ghanekar',
     template: '%s | Chaitan Ghanekar Portfolio',
   },
-  description: 'Portfolio.',
+  description: 'Personal Website',
   openGraph: {
     title: 'Chaitan Ghanekar Portfolio',
     url: baseUrl,
-    siteName: 'chaitan.dev',
     locale: 'en_US',
     type: 'website',
   },
