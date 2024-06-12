@@ -16,10 +16,9 @@ export const metadata: Metadata = {
   },
   description: 'Portfolio.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'Chaitan Ghanekar Portfolio',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'chaitan.dev',
     locale: 'en_US',
     type: 'website',
   },
