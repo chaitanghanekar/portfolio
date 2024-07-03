@@ -18,7 +18,7 @@ export default function Page() {
         Software Developer Based in Kelowna Canada
       </h3>
       <br></br>
-      <p className="mb-1 ml-3 mr-3 text-1xl tracking-tight">I have a strong educational background having graduated from the University of British 
+      <p className="mb-1 text-1xl tracking-tight">I have a strong educational background having graduated from the University of British 
         Columbia with a concentration in Computer Science, Mathematics, and 
         Data Science. My passion for technology and problem-solving 
         drives me to continuously learn and take on new challenges.</p>
