@@ -148,3 +148,16 @@ table {
 .title {
   text-wrap: balance;
 }
+
+.primary {
+  color: #EDF1D6;
+  background-color: #33402f;
+}
+
+.secondary{
+  color: #9DC08B;
+}
+
+.tertiary {
+  color: #609966;
+}

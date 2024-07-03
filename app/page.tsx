@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function Page() {
   return (
@@ -7,10 +8,21 @@ export default function Page() {
       <link rel="icon" href="/favicon1.ico"/>
     </Head>
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        Welcome
+      <h1 className="mb-2 text-8xl font-semibold tracking-tighter">
+        Hello!
       </h1>
-      <p>Hello! I'm Chaitan Ghanekar, a dedicated and enthusiastic developer based in Kelowna, Canada. I have a strong educational background, having graduated from the University of British Columbia with a focus on Computer Science, Mathematics, and Data Science. My passion for technology and problem-solving drives me to continuously learn and take on new challenges.</p>
+      <h2 className="mb-1 ml-5 text-3xl tracking-tight">
+        I'm Chaitan,
+      </h2>
+      <h3 className="mb-2 ml-7 text-1xl tracking-tight">
+        Software Developer Based in Kelowna Canada
+      </h3>
+      <br></br>
+      <p className="mb-1 ml-3 mr-3 text-1xl tracking-tight">I have a strong educational background having graduated from the University of British 
+        Columbia with a concentration in Computer Science, Mathematics, and 
+        Data Science. My passion for technology and problem-solving 
+        drives me to continuously learn and take on new challenges.</p>
+
     </section>
     </>
   );
