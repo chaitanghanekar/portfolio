@@ -2,11 +2,6 @@
 
 Welcome to the repository for my personal portfolio site. This project showcases my work, skills, and experience as an aspiring software developer. Learning Typescript, React and TailwindCSS.
 
-## Table of Contents
-
-- [About](#about)
-- [Contact](#contact)
-
 ## About
 
 - [Next.js](https://nextjs.org/)
