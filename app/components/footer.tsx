@@ -24,7 +24,7 @@ export default function Footer() {
       <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 md:flex-row md:space-x-4 md:space-y-0">
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-800"
+            className="flex items-center transition-all hover-secondary"
             rel="noopener noreferrer"
             target="_blank"
             href="https://www.linkedin.com/in/chaitan/"
@@ -35,7 +35,7 @@ export default function Footer() {
         </li>
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-800"
+            className="flex items-center transition-all hover-secondary"
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/chaitanghanekar"

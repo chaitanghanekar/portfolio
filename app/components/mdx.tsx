@@ -1,3 +1,4 @@
+// CustomMDX component with primary text color applied
 import Link from 'next/link'
 import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
@@ -6,19 +7,19 @@ import React from 'react'
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
-    <th key={index}>{header}</th>
+    <th key={index} className="px-4 py-2 border">{header}</th>
   ))
   let rows = data.rows.map((row, index) => (
-    <tr key={index}>
+    <tr key={index} className="odd:bg-gray-100 even:bg-gray-200 dark:odd:bg-gray-700 dark:even:bg-gray-800">
       {row.map((cell, cellIndex) => (
-        <td key={cellIndex}>{cell}</td>
+        <td key={cellIndex} className="px-4 py-2 border">{cell}</td>
       ))}
     </tr>
   ))
 
   return (
-    <table>
-      <thead>
+    <table className="min-w-full divide-y divide-gray-200">
+      <thead className="bg-gray-50 dark:bg-gray-800">
         <tr>{headers}</tr>
       </thead>
       <tbody>{rows}</tbody>
@@ -50,18 +51,18 @@ function RoundedImage(props) {
 
 function Code({ children, ...props }) {
   let codeHTML = highlight(children)
-  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
+  return <code className="px-1 py-0.5 rounded-lg" dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 
 function slugify(str) {
   return str
     .toString()
     .toLowerCase()
-    .trim() // Remove whitespace from both ends of a string
-    .replace(/\s+/g, '-') // Replace spaces with -
-    .replace(/&/g, '-and-') // Replace & with 'and'
-    .replace(/[^\w\-]+/g, '') // Remove all non-word characters except for -
-    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/&/g, '-and-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
 }
 
 function createHeading(level) {
@@ -69,7 +70,7 @@ function createHeading(level) {
     let slug = slugify(children)
     return React.createElement(
       `h${level}`,
-      { id: slug },
+      { id: slug, className: `heading-${level}` },
       [
         React.createElement('a', {
           href: `#${slug}`,
@@ -104,6 +105,8 @@ export function CustomMDX(props) {
     <MDXRemote
       {...props}
       components={{ ...components, ...(props.components || {}) }}
+      // Apply prose class for general text styles, including .primary
+      className="prose primary"
     />
   )
 }

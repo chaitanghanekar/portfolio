@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 
 ::selection {
-  background-color: #47a3f3;
-  color: #fefefe;
+  background-color: #9DC08B;
+  color: #EDF1D6;
 }
 
 :root {
@@ -20,13 +20,29 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --sh-class: #4c97f8;
-    --sh-identifier: white;
+    --sh-identifier: #EDF1D6;
     --sh-keyword: #f47067;
     --sh-string: #0fa295;
   }
-  html {
-    color-scheme: dark;
-  }
+}
+
+/* global.css or styles.css */
+
+.hover-secondary:hover {
+  color: #609966; /* Specify your desired hover color */
+}
+
+.primary {
+  color: #EDF1D6;
+  background-color: #33402f;
+}
+
+.secondary{
+  color: #9DC08B;
+}
+
+.tertiary {
+  color: #609966;
 }
 
 html {
@@ -84,7 +100,7 @@ html {
 }
 
 .prose p {
-  @apply my-4 text-neutral-800 dark:text-neutral-200;
+  @apply my-4;
 }
 
 .prose h1 {
@@ -149,15 +165,3 @@ table {
   text-wrap: balance;
 }
 
-.primary {
-  color: #EDF1D6;
-  background-color: #33402f;
-}
-
-.secondary{
-  color: #9DC08B;
-}
-
-.tertiary {
-  color: #609966;
-}

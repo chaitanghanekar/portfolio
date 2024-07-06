@@ -3,6 +3,39 @@ title: 'Product Price Tracking Website'
 publishedAt: '2024-04-01'
 ---
 
-The goal was to create a robust website for users to search and view products as well as view the changing prices. Upon account creation users could also comment and add products to a tracked list. With moderation in mind a whole admin tool suite was developed as well. 
-Administrators could moderate user accounts and comments as well as view site metrics. The website was developed using the Bootstrap framework for the frontend with PHP and JavaScript for the backend.
+![Welcome Page](/image.jpg)
+
+ChipiChipiChapa, the perfect solution for finding the best deals on Best Buy products. Users can browse from a large database of products and view their price history. 
+Upon account creation users can also comment and add products to a tracked list. With moderation in mind, a whole admin tool suite was developed as well. 
+Administrators can moderate user accounts and comments as well as view site metrics. The website was developed using the Bootstrap framework for the frontend with PHP and JavaScript for the backend.
+
+![Product Page](/image2.png)
+
 Pages served data from a realtime data base where the information was updated on the site asyncrounously using AJAX. 
+This page uses SQL along with Chart.js and AJAX to display graphs and data about the given product. 
+
+![Product List](/image4.png)
+
+This page showcases all the products that were queried using SQL via the Search bar on every page in the web-app. On this page, you can also filter the search with a modal that pops up when you click the Filter button next to the Search bar. The code looks for the selected dropdown menu items (Category, Subcategory, & Items per Page) and modifies the SQL query for searching the products appropriately.
+productList.php: Most of the UI and JavaScript scripts are present here. Most of the PHP code for handling the SQL connections are also present here.
+getSubcategories.php: Gets a list of subcategories to add as dropdown menu entries, given the Category name is known.
+
+![Tracker](/image3.png)
+
+Features List:<br />
+-Search for Products<br />
+-Product tracking<br />
+-Visual display of updates, etc (site usage charts, etc)<br />
+-Activity by date<br />
+-Collapsible items without page reloading<br />
+-Alerts on page changes<br />
+-Admin view reports on usage (with filtering)<br />
+-Styling flourishes<br />
+-Responsive layout for mobile<br />
+-Tracking comment history from a user’s perspective<br />
+
+-Known Limitations:<br />
+-Database is not continuously updated by use of API<br />
+-Screen readers struggle with some aspects such as the graphs<br />
+-Only accepts .PNG or .JPEG as profile pictures.<br />
+-Password encryption could be stronger, it is only protected with the bcrypt hashing system at the moment<br />
