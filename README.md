@@ -4,6 +4,6 @@ Welcome to the repository for my personal portfolio site. This project showcases
 
 ## Contact
 
-Chaitan Ghanekar - [chaitanghanekar@example.com](mailto:chaitan.ghanekar@gmail.com)
+Chaitan Ghanekar - [chaitanghanekar@gmail.com](mailto:chaitan.ghanekar@gmail.com)
 
 Feel free to reach out if you have any questions or suggestions!
