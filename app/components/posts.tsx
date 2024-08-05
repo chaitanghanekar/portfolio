@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import { formatDate, getBlogPosts } from 'app/projects/utils'
 
-function ArrowIcon() {
+function ArrowIcon({ className = '' }) {
   return (
     <svg
+      className={className}
       width="12"
       height="12"
       viewBox="0 0 12 12"
@@ -38,15 +39,15 @@ export function BlogPosts() {
             className="flex flex-col space-y-1 mb-4"
             href={`/projects/${post.slug}`}
           >
-            <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
-              <p className="text-sm mt-0.5 text-neutral-400 w-[120px] tabular-nums ">
+            <div className="w-full flex flex-col md:flex-row md:items-center">
+              <p className="text-sm text-neutral-400 w-full md:w-[120px] tabular-nums mb-1 md:mb-0">
                 {formatDate(post.metadata.publishedAt, false)}
               </p>
-              <div className="flex items-center space-x-1 hover-secondary">
-                <p className="tracking-tight">
-                  {post.metadata.title}
+              <div className="flex items-center hover-secondary overflow-hidden">
+                <p className="tracking-tight truncate flex-1 inline-flex items-center">
+                  <span className="truncate">{post.metadata.title}</span>
+                  <ArrowIcon className="flex-shrink-0 ml-1" />
                 </p>
-                <ArrowIcon />
               </div>
             </div>
           </Link>
