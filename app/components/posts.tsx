@@ -44,9 +44,9 @@ export function BlogPosts() {
                 {formatDate(post.metadata.publishedAt, false)}
               </p>
               <div className="flex items-center hover-secondary overflow-hidden">
-                <p className="tracking-tight truncate flex-1 inline-flex items-center">
-                  <span className="truncate">{post.metadata.title}</span>
-                  <ArrowIcon className="flex-shrink-0 ml-1" />
+                <p className="tracking-tight">
+                  <span>{post.metadata.title}</span>
+                  <ArrowIcon className="inline-flex flex-shrink-0 ml-1" />
                 </p>
               </div>
             </div>
