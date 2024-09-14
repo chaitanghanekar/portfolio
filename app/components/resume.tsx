@@ -15,10 +15,10 @@ const Education = ({ university, degree, concentration}) => (
   </div>
 );
 
-const Project = ({ title, technologies, period, description }) => (
+const Project = ({ title, technologies, description }) => (
   <div className="mb-4">
-    <h3 className="text-lg">{title} | <span className="text-base italic text-neutral-400">{technologies}</span></h3>
-    <p className="text-sm text-neutral-300">{period}</p>
+    <h3 className="text-lg">{title}</h3>
+    <p className="text-base italic text-neutral-400">{technologies}</p>
     <div className="text-base leading-tight">
       {description.map((item, index) => (
         <div className="mb-2 flex items-start" key={index}>
@@ -61,16 +61,14 @@ const Resume = () => {
         <Project
           title="Product Price Tracking Website"
           technologies="JavaScript, HTML, PHP, Bootstrap"
-          period="April 2024"
           description={[
             "Fullstack team development of website using HTML and the Bootstrap framework on the front end and PHP and JavaScript on the back end.",
             "Met all deadlines and collaborated effectively as a team."
           ]}
         />
         <Project
-          title="Convolutional Neural Network Training and Design"
+          title="Convolutional Neural Network Design"
           technologies="MATLab"
-          period="March 2024"
           description={[
             "Planned and created my own network structure for image recognition as well as retrained an existing network (Alexnet) for specific image recognition tasks."
           ]}
@@ -78,7 +76,6 @@ const Resume = () => {
         <Project
           title="Community Wildfire Response Application"
           technologies="Java, HTML, Android Studio"
-          period="Dec 2023"
           description={[
             "Group development of android application for community wildfire response using Java.",
             "Effectively collaborated in the design and implementation of our application."
@@ -132,7 +129,7 @@ const Resume = () => {
 
       <Section title="VOLUNTEER EXPERIENCE">
         <Experience
-          title="Team Captain & Club Coordinator"
+          title="Captain & Coordinator"
           company="UBCO Esports Club"
           location="Kelowna, Canada"
           period="Sept 2019 - April 2022"
