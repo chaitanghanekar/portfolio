@@ -20,9 +20,9 @@ export default function Page() {
       </h3>
       <br></br>
       
-      <p className="mb-1 text-1xl tracking-tight">I have a strong educational background having graduated from the University of British 
-        Columbia with a Bachelors Degree with a concentration in Computer Science, Mathematics, and 
-        Data Science. My passion for technology and problem-solving 
+      <p className="mb-1 text-1xl tracking-tight">I graduated from the University of British Columbia with a 
+        Bachelor's degree in Computer Science, Mathematics, and Data Science, equipping me 
+        with a strong and versatile foundation. My passion for technology and problem-solving 
         drives me to continuously learn and take on new challenges.</p>
 
     </section>

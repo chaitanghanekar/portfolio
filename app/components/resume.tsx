@@ -17,13 +17,16 @@ const Education = ({ university, degree, concentration}) => (
 
 const Project = ({ title, technologies, period, description }) => (
   <div className="mb-4">
-    <h3 className="text-lg">{title} |<span className="text-base italic text-neutral-400"> {technologies}</span></h3>
+    <h3 className="text-lg">{title} | <span className="text-base italic text-neutral-400">{technologies}</span></h3>
     <p className="text-sm text-neutral-300">{period}</p>
-    <ul className="text-base list-disc list-inside leading-tight">
+    <div className="text-base leading-tight">
       {description.map((item, index) => (
-        <li className="mb-1" key={index} style={{ textIndent: '-1.4em', paddingLeft: '1.4em' }}>{item}</li>
+        <div className="mb-2 flex items-start" key={index}>
+          <span className="mr-2 text-neutral-400">•</span>
+          <p className="flex-grow">{item}</p>
+        </div>
       ))}
-    </ul>
+    </div>
   </div>
 );
 
@@ -32,11 +35,14 @@ const Experience = ({ title, company, location, period, responsibilities }) => (
     <h3 className="text-lg">{title} | <span className="text-base text-neutral-400">{location}</span> </h3>
     <p className="italic">{company}</p>
     <p className="text-sm text-neutral-400">{period}</p>
-    <ul className="list-disc list-inside leading-tight">
+    <div className="text-base leading-tight">
       {responsibilities.map((item, index) => (
-        <li className="mb-1" key={index} style={{ textIndent: '-1.4em', paddingLeft: '1.4em' }}>{item}</li>
+        <div className="mb-2 flex items-start" key={index}>
+          <span className="mr-2 text-neutral-400">•</span>
+          <p className="flex-grow">{item}</p>
+        </div>
       ))}
-    </ul>
+    </div>
   </div>
 );
 
