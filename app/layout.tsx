@@ -51,7 +51,7 @@ export default function RootLayout({
       )}
     >
       <body className="antialiased flex justify-center">
-        <main className="flex-auto w-full max-w-xl mt-8 flex flex-col px-4 md:px-0">
+        <main className="flex-auto w-full max-w-3xl mt-8 flex flex-col px-4 md:px-0">
           <Navbar />
           {children}
           <Footer />
