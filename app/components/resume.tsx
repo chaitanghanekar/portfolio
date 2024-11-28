@@ -15,20 +15,6 @@ const Education = ({ university, degree, concentration}) => (
   </div>
 );
 
-const Project = ({ title, technologies, description }) => (
-  <div className="mb-4">
-    <h3 className="text-lg">{title}</h3>
-    <p className="text-base italic text-neutral-400">{technologies}</p>
-    <div className="text-base leading-tight">
-      {description.map((item, index) => (
-        <div className="mb-2 flex items-start" key={index}>
-          <span className="mr-2 text-neutral-400">•</span>
-          <p className="flex-grow">{item}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-);
 
 const Experience = ({ title, company, location, period, responsibilities }) => (
   <div className="mb-4">
@@ -54,32 +40,6 @@ const Resume = () => {
           university="University of British Columbia"
           degree="Bachelor of Science"
           concentration="Concentration in Computer Science, Mathematics and Data Science"
-        />
-      </Section>
-
-      <Section title="PROJECTS">
-        <Project
-          title="Product Price Tracking Website"
-          technologies="JavaScript, HTML, PHP, Bootstrap"
-          description={[
-            "Fullstack team development of website using HTML and the Bootstrap framework on the front end and PHP and JavaScript on the back end.",
-            "Met all deadlines and collaborated effectively as a team."
-          ]}
-        />
-        <Project
-          title="Convolutional Neural Network Design"
-          technologies="MATLab"
-          description={[
-            "Planned and created my own network structure for image recognition as well as retrained an existing network (Alexnet) for specific image recognition tasks."
-          ]}
-        />
-        <Project
-          title="Community Wildfire Response Application"
-          technologies="Java, HTML, Android Studio"
-          description={[
-            "Group development of android application for community wildfire response using Java.",
-            "Effectively collaborated in the design and implementation of our application."
-          ]}
         />
       </Section>
 
