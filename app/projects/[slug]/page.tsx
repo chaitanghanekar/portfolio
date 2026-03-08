@@ -79,7 +79,8 @@ export default function Blog({ params }) {
               '@type': 'Person',
               name: 'My Projects',
             },
-          }),
+          // Escape </script> to prevent script tag injection via metadata values
+          }).replace(/<\/script>/gi, '<\\/script>').replace(/<!--/g, '<\\!--'),
         }}
       />
       <h1 className="title font-semibold text-2xl tracking-tighter">

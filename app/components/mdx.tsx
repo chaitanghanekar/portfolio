@@ -30,6 +30,12 @@ function Table({ data }) {
 function CustomLink(props) {
   let href = props.href
 
+  // Block dangerous URI schemes (XSS via javascript: or data:)
+  const lowerHref = (href || '').trim().toLowerCase()
+  if (lowerHref.startsWith('javascript:') || lowerHref.startsWith('data:')) {
+    return <span {...props} />
+  }
+
   if (href.startsWith('/')) {
     return (
       <Link href={href} {...props}>
