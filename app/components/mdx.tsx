@@ -5,7 +5,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import React from 'react'
 
-function Table({ data }) {
+function Table({ data }: { data: { headers: string[]; rows: string[][] } }) {
   let headers = data.headers.map((header, index) => (
     <th key={index} className="px-4 py-2 border">{header}</th>
   ))
@@ -27,13 +27,13 @@ function Table({ data }) {
   )
 }
 
-function CustomLink(props) {
-  let href = props.href
+function CustomLink(props: React.AnchorHTMLAttributes<HTMLAnchorElement> & { href?: string }) {
+  let href = props.href ?? ''
 
   // Block dangerous URI schemes (XSS via javascript: or data:)
-  const lowerHref = (href || '').trim().toLowerCase()
+  const lowerHref = href.trim().toLowerCase()
   if (lowerHref.startsWith('javascript:') || lowerHref.startsWith('data:')) {
-    return <span {...props} />
+    return <span>{props.children}</span>
   }
 
   if (href.startsWith('/')) {
@@ -51,16 +51,16 @@ function CustomLink(props) {
   return <a target="_blank" rel="noopener noreferrer" {...props} />
 }
 
-function RoundedImage(props) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />
+function RoundedImage(props: React.ComponentProps<typeof Image>) {
+  return <Image alt={props.alt ?? ''} className="rounded-lg" {...props} />
 }
 
-function Code({ children, ...props }) {
+function Code({ children, ...props }: { children: string } & React.HTMLAttributes<HTMLElement>) {
   let codeHTML = highlight(children)
   return <code className="px-1 py-0.5 rounded-lg" dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 
-function slugify(str) {
+function slugify(str: string): string {
   return str
     .toString()
     .toLowerCase()
@@ -71,8 +71,8 @@ function slugify(str) {
     .replace(/\-\-+/g, '-')
 }
 
-function createHeading(level) {
-  const Heading = ({ children }) => {
+function createHeading(level: number) {
+  const Heading = ({ children }: { children: string }) => {
     let slug = slugify(children)
     return React.createElement(
       `h${level}`,
@@ -106,7 +106,7 @@ let components = {
   Table,
 }
 
-export function CustomMDX(props) {
+export function CustomMDX(props: React.ComponentProps<typeof MDXRemote>) {
   return (
     <MDXRemote
       {...props}
