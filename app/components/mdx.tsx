@@ -72,8 +72,8 @@ function slugify(str: string): string {
 }
 
 function createHeading(level: number) {
-  const Heading = ({ children }: { children: string }) => {
-    let slug = slugify(children)
+  const Heading = ({ children }: React.HTMLAttributes<HTMLHeadingElement>) => {
+    let slug = slugify(typeof children === 'string' ? children : String(children ?? ''))
     return React.createElement(
       `h${level}`,
       { id: slug, className: `heading-${level}` },
