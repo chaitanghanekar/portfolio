@@ -111,8 +111,6 @@ export function CustomMDX(props: React.ComponentProps<typeof MDXRemote>) {
     <MDXRemote
       {...props}
       components={{ ...components, ...(props.components || {}) }}
-      // Apply prose class for general text styles, including .primary
-      className="prose primary"
     />
   )
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Section = ({ title, children }) => (
+const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
   <div className="mb-4">
     <h2 className="text-3xl text-underline font-semibold tracking-tight">{title}</h2>
     {children}
   </div>
 );
 
-const Education = ({ university, degree, concentration}) => (
+const Education = ({ university, degree, concentration }: { university: string; degree: string; concentration: string }) => (
   <div className="mb-2">
     <h3 className="text-lg">{university}</h3>
     <p>{degree}</p>
@@ -16,7 +16,7 @@ const Education = ({ university, degree, concentration}) => (
 );
 
 
-const Experience = ({ title, company, location, period, responsibilities }) => (
+const Experience = ({ title, company, location, period, responsibilities }: { title: string; company: string; location: string; period: string; responsibilities: string[] }) => (
   <div className="mb-4">
     <h3 className="text-lg">{title} | <span className="text-base text-neutral-400">{location}</span> </h3>
     <p className="italic">{company}</p>
